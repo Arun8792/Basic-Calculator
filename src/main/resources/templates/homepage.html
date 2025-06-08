@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    
+		<style>
+		  body {
+		    font-family: Arial, sans-serif;
+		    background-color: #f2f2f2;
+		    text-align: center;
+		    padding-top: 50px;
+		  }
+
+		  h1 {
+		    color: #333;
+		    margin-bottom: 30px;
+		  }
+
+		  .calculator {
+		    background-color: #fff;
+		    display: inline-block;
+		    padding: 30px;
+		    border-radius: 10px;
+		    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		  }
+
+		  form {
+		    display: flex;
+		    flex-direction: column;
+		    gap: 15px;
+		    align-items: flex-start;
+		  }
+
+		  label {
+		    font-weight: bold;
+		    margin-bottom: 5px;
+		  }
+
+		  input[type="number"] {
+		    width: 250px;
+		    padding: 8px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		  }
+
+		  button {
+		    padding: 10px 20px;
+		    margin: 5px 5px 0 0;
+		    border: none;
+		    border-radius: 5px;
+		    background-color: #4caf50;
+		    color: white;
+		    font-weight: bold;
+		    cursor: pointer;
+		  }
+
+		  button:hover {
+		    background-color: #45a049;
+		  }
+
+		  .calculator div {
+		    margin-top: 10px;
+		  }
+		</style>
+
+    
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="calculator">
+        <form action="http://localhost:8080/calcii/calculate" method="POST">
+            <label for="num1">Enter Number 1:</label>
+            <input type="number" id="num1" name="num1" required>
+
+            <label for="num2">Enter Number 2:</label>
+            <input type="number" id="num2" name="num2" required>
+
+            <div>
+                <button type="submit" name="operation" value="add">Add</button>
+                <button type="submit" name="operation" value="sub">Subtract</button>
+                <button type="submit" name="operation" value="mul">Multiply</button>
+                <button type="submit" name="operation" value="div">Divide</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
